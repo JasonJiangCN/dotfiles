@@ -59,3 +59,5 @@ zplug zsh-users/zsh-syntax-highlighting
 zplug themes/agnoster, from:oh-my-zsh 
 
 zplug load
+
+alias vi="vim"

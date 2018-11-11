@@ -1,6 +1,14 @@
 # Dot files
 This repo stores the dot (configuration) files on my computer.
-
+# Usage
+Try
+```
+chmod +x instal.sh
+```
+and 
+```
+./install.sh
+```
 ## vimrc
 vim config file, vim-plug needed
 ## zshrc

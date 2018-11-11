@@ -1,2 +1,14 @@
-# zshrc
-used for storing .zshrc
+# Dot files
+This repo stores the dot (configuration) files on my computer.
+
+## vimrc
+vim config file, vim-plug needed
+## zshrc
+zsh config file, zplug needed
+## stardict
+The Chinese-English and English-Chinese dictionaries for stardict.
+install stardict first
+```
+sudo apt install sdcv
+```
+

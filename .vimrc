@@ -54,14 +54,15 @@ Plug 'morhetz/gruvbox'
 "autoclose
 Plug 'Raimondi/delimitMate'
 "indent
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
 "a.vim
 Plug 'vim-scripts/a.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'docunext/closetag.vim'
 Plug 'rhysd/vim-grammarous'
-"Plug 'vim-latex/vim-latex'
+
+Plug 'vim-latex/vim-latex'
 call plug#end()            " required
 filetype plugin indent on    " required
 
@@ -85,6 +86,8 @@ let g:javascript_plugin_jsdoc = 1
 let g:closetag_html_style=1
 "Tagbar
 map <C-n> :TagbarToggle<CR>
+autocmd FileType markdown let g:indentLine_enabled=0
+autocmd FileType latex setlocal g:indentLine_enabled = 0
 
 "Other changes
 set number
@@ -104,7 +107,6 @@ set guifont=DejaVu\ Sans\ Mono\ Nerd\ Font\ Complete:h14
 set fileencodings=utf-8,chinese
 set fileencoding=utf-8
 set noswapfile
-
 function! MoveFile(newspec)
     let l:old = expand('%')
     " could be improved:

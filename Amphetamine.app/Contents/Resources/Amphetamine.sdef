@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+
+<dictionary title="Amphetamine Terminology">
+    
+    <suite name="Standard Suite" code="????" description="Common classes and commands for all applications.">
+        
+        <command name="quit" code="aevtquit" description="Quit the application.">
+            <cocoa class="NSQuitCommand"/>
+        </command>
+        
+        <class name="application" code="capp" description="The application's top-level scripting object.">
+            <cocoa class="NLApplication"/>
+            <property name="name" code="pnam" type="text" access="r" description="The name of the application."/>
+            <property name="frontmost" code="pisf" type="boolean" access="r" description="Is this the active application?">
+                <cocoa key="isActive"/>
+            </property>
+            <property name="version" code="vers" type="text" access="r" description="The version number of the application."/>
+            <element type="window" access="r">
+                <cocoa key="orderedWindows"/>
+            </element>
+            <responds-to command="quit">
+                <cocoa method="handleQuitScriptCommand:"/>
+            </responds-to>
+        </class>
+        
+        <class name="window" code="cwin" description="A window.">
+            <cocoa class="NSWindow"/>
+            <property name="name" code="pnam" type="text" access="r" description="The title of the window.">
+                <cocoa key="title"/>
+            </property>
+            <property name="id" code="ID  " type="integer" access="r" description="The unique identifier of the window.">
+                <cocoa key="uniqueID"/>
+            </property>
+            <property name="index" code="pidx" type="integer" description="The index of the window, ordered front to back.">
+                <cocoa key="orderedIndex"/>
+            </property>
+            <property name="bounds" code="pbnd" type="rectangle" description="The bounding rectangle of the window.">
+                <cocoa key="boundsAsQDRect"/>
+            </property>
+            <property name="closeable" code="hclb" type="boolean" access="r" description="Does the window have a close button?">
+                <cocoa key="hasCloseBox"/>
+            </property>
+            <property name="miniaturizable" code="ismn" type="boolean" access="r" description="Does the window have a minimize button?">
+                <cocoa key="isMiniaturizable"/>
+            </property>
+            <property name="miniaturized" code="pmnd" type="boolean" description="Is the window minimized right now?">
+                <cocoa key="isMiniaturized"/>
+            </property>
+            <property name="resizable" code="prsz" type="boolean" access="r" description="Can the window be resized?">
+                <cocoa key="isResizable"/>
+            </property>
+            <property name="visible" code="pvis" type="boolean" description="Is the window visible right now?">
+                <cocoa key="isVisible"/>
+            </property>
+            <property name="zoomable" code="iszm" type="boolean" access="r" description="Does the window have a zoom button?">
+                <cocoa key="isZoomable"/>
+            </property>
+            <property name="zoomed" code="pzum" type="boolean" description="Is the window zoomed right now?">
+                <cocoa key="isZoomed"/>
+            </property>
+            <responds-to command="close">
+                <cocoa method="handleCloseScriptCommand:"/>
+            </responds-to>
+        </class>
+        
+    </suite>
+    
+    
+    <suite name="Amphetamine Suite" code="Amph" description="Application specific classes.">
+        
+        <command name="session is active" code="amphcAct" description="Checks for active session.">
+            <cocoa class="AmphScript"/>
+            <result type="any" description="Returns boolean - true or false - indicating whether there is an active session"/>
+        </command>
+        
+        <command name="start new session" code="amphcmOn" description="Starts a new session. Options from Amphetamine's Preferences (default duration/display sleep allowed) are used if options are not explictly supplied in command. Ends any existing sessions, including Trigger-based sessions before starting a new session.">
+            <parameter name="with options" code="optn" type="record" optional="yes" description="Use format: {duration:integer, interval:hours or minutes, displaySleepAllowed:true or false}. For an infinite duration session, use 0 for duration, and 0 for interval. Example: {duration:3, interval:hours, displaySleepAllowed:false}">
+                <cocoa key="options"/>
+            </parameter>
+            <cocoa class="AmphScript"/>
+        </command>
+        
+        <command name="end session" code="amphcOff" description="Ends the current session. Trigger sessions will also end with this command, but may immediately restart (this command does not disable Triggers).">
+            <cocoa class="AmphScript"/>
+        </command>
+        
+        <command name="session time remaining" code="amphSTRm" description="Returns the time remaining in a session.">
+            <cocoa class="AmphScript"/>
+            <result type="any" description="Returns an int of the total seconds remaining in a session. Returns 0 if session is of infinite duration, returns -1 if session is Trigger-based, returns -2 if session is app-based (i.e. while app is running) or date-based (i.e. until XX:XX time), returns -3 if there is no active session."/>
+        </command>
+    
+        <command name="display sleep allowed" code="amphDSOK" description="Checks for whether display sleep is permitted.">
+            <cocoa class="AmphScript"/>
+            <result type="any" description="Returns boolean - true or false - indicating whether display sleep is permitted. True is returned if there is no active session."/>
+        </command>
+        
+        <command name="allow display sleep" code="amphAWDS" description="Updates Amphetamine's preferences to allow display sleep during active sessions. If a session is active, the session is modified to allow display sleep. Does not affect Trigger sessions.">
+            <cocoa class="AmphScript"/>
+        </command>
+        
+        <command name="prevent display sleep" code="amphPTDS" description="Updates Amphetamine's preferences to prevent display sleep during active sessions. If a session is already active, the session is modified to prevent display sleep. Does not affect Trigger sessions.">
+            <cocoa class="AmphScript"/>
+        </command>
+        
+        <command name="session is Trigger" code="amphSisT" description="Checks whether current session was started by a Trigger.">
+            <cocoa class="AmphScript"/>
+            <result type="any" description="Returns boolean - true or false - indicating whether current session is Trigger-based. False boolean is always returned if there is no active session."/>
+        </command>
+        
+        <command name="Triggers are enabled" code="amphTrEn" description="Returns whether Trigger session activation is enabled.">
+            <cocoa class="AmphScript"/>
+            <result type="any" description="Returns a boolean - true or false - indicating whether Triggers are enabled in Amphetamine's preferences."/>
+        </command>
+        
+        <command name="enable Triggers" code="amphEnTr" description="Updates Amphetamine's preferences to enable Trigger session activation.">
+            <cocoa class="AmphScript"/>
+        </command>
+        
+        <command name="disable Triggers" code="amphDsTr" description="Updates Amphetamine's preferences to disable Trigger session activation.">
+            <cocoa class="AmphScript"/>
+        </command>
+        
+        <command name="Drive Alive is enabled" code="amphDAEn" description="Returns whether Drive Alive is enabled">
+            <cocoa class="AmphScript"/>
+            <result type="any" description="Returns a boolean - true or false - indicating whether Drive Alive is enabled in Amphetamine's preferences."/>
+        </command>
+        
+        <command name="enable Drive Alive" code="amphEnDA" description="Updates Amphetamine's preferences to enable Drive Alive.">
+            <cocoa class="AmphScript"/>
+        </command>
+        
+        <command name="disable Drive Alive" code="amphDsDA" description="Updates Amphetamine's preferences to disable Drive Alive.">
+            <cocoa class="AmphScript"/>
+        </command>
+        
+        <command name="give molecule" code="amphcOoo" description="Gives a molecule, as requested.">
+            <cocoa class="AmphScript"/>
+        </command>
+       
+       <command name="enable heisenberg" code="amphBERG" description="Enables heisenberg, as requested.">
+           <cocoa class="AmphScript"/>
+       </command>
+       
+    </suite>￼
+    
+</dictionary>

@@ -3,11 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>18B45d</string>
+	<string>18G84</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>itr</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>iTermRecordingIcon.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>iTerm2 Recording</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
 			<array>
@@ -48,6 +60,24 @@
 			<string>Editor</string>
 		</dict>
 		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>itermscript</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>iTerm2Script.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>iTerm2 Script</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>public.data</string>
+			</array>
+		</dict>
+		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Shell</string>
 			<key>LSItemContentTypes</key>
@@ -59,7 +89,7 @@
 	<key>CFBundleExecutable</key>
 	<string>iTerm2</string>
 	<key>CFBundleGetInfoString</key>
-	<string>3.2.6</string>
+	<string>3.3.3</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>iTerm2 Help</string>
 	<key>CFBundleHelpBookName</key>
@@ -77,7 +107,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.2.6</string>
+	<string>3.3.3</string>
 	<key>CFBundleSignature</key>
 	<string>ITRM</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -184,23 +214,39 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>3.2.6</string>
+	<string>3.3.3</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>10A255</string>
+	<string>10E125</string>
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>18A384</string>
+	<string>18E219</string>
 	<key>DTSDKName</key>
 	<string>macosx10.14</string>
 	<key>DTXcode</key>
-	<string>1000</string>
+	<string>1020</string>
 	<key>DTXcodeBuild</key>
-	<string>10A255</string>
+	<string>10E125</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>127.0.0.1</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+			<key>localhost</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
 	<key>NSAppleEventsUsageDescription</key>
 	<string>An application in iTerm2 wants to use AppleScript.</string>
 	<key>NSAppleScriptEnabled</key>
@@ -272,15 +318,19 @@
 	</array>
 	<key>NSSupportsAutomaticGraphicsSwitching</key>
 	<true/>
+	<key>NSSystemAdministrationUsageDescription</key>
+	<string>The operation being performed by a program in iTerm2 requires elevated permission.</string>
 	<key>OSAScriptingDefinition</key>
 	<string>iTerm2.sdef</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml</string>
+	<string>https://iterm2.com/appcasts/final_new.xml</string>
 	<key>SUFeedURLForFinal</key>
-	<string>https://iterm2.com/appcasts/final.xml</string>
+	<string>https://iterm2.com/appcasts/final_new.xml</string>
 	<key>SUFeedURLForTesting</key>
-	<string>https://iterm2.com/appcasts/testing.xml</string>
+	<string>https://iterm2.com/appcasts/testing_new.xml</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
+	<key>SUPublicEDKey</key>
+	<string>xdqAa0KXBPhMbUrutVTe87i6U7yWf7WKaCeRG7AAZ0w=</string>
 </dict>
 </plist>

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/ActiveEscapeHatch.tiff</key>
 		<data>
-		7uQ5YNXiMDe1YcqXu9vl0TZiCiw=
+		l7DchyCkRffq5jprkyq3x1LHhZY=
 		</data>
 		<key>Resources/ActiveEyedropper.tiff</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		qqwhvVS0OPWB33OJkf8Gz5F1VzY=
+		7oKsm8nC7aBRx2ccW3Zy9SE9DjQ=
 		</data>
 		<key>Resources/NoColor.tiff</key>
 		<data>
-		u4yYM7bi3J8QnAVed1CtxzHyq6g=
+		udOOLdrWTnZikEHmcxUqGKh7up8=
 		</data>
 		<key>Resources/RGB.tiff</key>
 		<data>
-		MiJYWBA9htypq9TAlTP2KYEUWCM=
+		ndgNYAQlvY7ovT/WJU3pOZZ/5gg=
 		</data>
 		<key>Resources/Remove.tiff</key>
 		<data>
-		lDXKqNcXf6zgkux1q+gzcaCta4Y=
+		DaiIpNv5aIgHiBgQvtzi2GrG3vc=
 		</data>
 		<key>Resources/SelectedColorIndicator.tiff</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Resources/SelectionIndicator.tiff</key>
 		<data>
-		2C0moUh4Maw9N17c8PRgRCxzMs8=
+		3T3ZaaVL/c9j2QcVMCVYphB3u7Q=
 		</data>
 		<key>Resources/SwatchCheckerboard.tiff</key>
 		<data>
@@ -67,11 +67,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7uQ5YNXiMDe1YcqXu9vl0TZiCiw=
+			l7DchyCkRffq5jprkyq3x1LHhZY=
 			</data>
 			<key>hash2</key>
 			<data>
-			lLcR/WbET7NhIzkhNbsmfRNs5P4WSrMBfGsl+lAK82s=
+			VafYzWfN8xTqudmLSEmUierdXVV8J0TcO4PbgiaFMyE=
 			</data>
 		</dict>
 		<key>Resources/ActiveEyedropper.tiff</key>
@@ -133,44 +133,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qqwhvVS0OPWB33OJkf8Gz5F1VzY=
+			7oKsm8nC7aBRx2ccW3Zy9SE9DjQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			LoLDEc4X6VKU5ev1NLRBfOX++/49imCbISYcK4W0LUc=
+			9K4fRds/JR0f2K459uDGX9t/oH4QLIJMh7e9Wk7dqws=
 			</data>
 		</dict>
 		<key>Resources/NoColor.tiff</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			u4yYM7bi3J8QnAVed1CtxzHyq6g=
+			udOOLdrWTnZikEHmcxUqGKh7up8=
 			</data>
 			<key>hash2</key>
 			<data>
-			M1V2z6chawGm7YGZxje/l2EcW5zfGrUlBQ0K5clP6gs=
+			WYMpOnRI662tZnWEpUlQd3yZwH/TJt2y4gTQrO6K7Ys=
 			</data>
 		</dict>
 		<key>Resources/RGB.tiff</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MiJYWBA9htypq9TAlTP2KYEUWCM=
+			ndgNYAQlvY7ovT/WJU3pOZZ/5gg=
 			</data>
 			<key>hash2</key>
 			<data>
-			1SyJAixAV8AwhVT6Gd92QKydyuWLYZtreorYrXdHKjg=
+			Ju9edJ7plT+yp3rFklp78Rty61kObyYDVJs1847EW0Q=
 			</data>
 		</dict>
 		<key>Resources/Remove.tiff</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lDXKqNcXf6zgkux1q+gzcaCta4Y=
+			DaiIpNv5aIgHiBgQvtzi2GrG3vc=
 			</data>
 			<key>hash2</key>
 			<data>
-			vprc8qE5pU3cGJXcLqto1MyM3ut2k7xyjInhq6JBSwE=
+			Sv14I9b6jsSF7czO+MnN13UjV1MTtN9lE5zFKIkBO3g=
 			</data>
 		</dict>
 		<key>Resources/SelectedColorIndicator.tiff</key>
@@ -188,11 +188,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2C0moUh4Maw9N17c8PRgRCxzMs8=
+			3T3ZaaVL/c9j2QcVMCVYphB3u7Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			0EeCexJaEW/8c28UP1bQD3q8eSdNd7WZzm2Gkr6ozoE=
+			jd+X/5CDaH5BciDOtVuzYQEp7unsAZO2jDlXu9kaLdY=
 			</data>
 		</dict>
 		<key>Resources/SwatchCheckerboard.tiff</key>

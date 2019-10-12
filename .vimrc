@@ -48,7 +48,8 @@ Plug 'honza/vim-snippets'
 "Rooter
 Plug 'airblade/vim-rooter'
 "You Complete Me
-Plug 'Valloric/YouCompleteMe'
+"Commented for TabNine
+"Plug 'Valloric/YouCompleteMe'
 "Theme
 Plug 'morhetz/gruvbox'
 "autoclose
@@ -61,7 +62,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'docunext/closetag.vim'
 Plug 'rhysd/vim-grammarous'
-
+Plug 'zxqfl/tabnine-vim'
 Plug 'vim-latex/vim-latex'
 call plug#end()            " required
 filetype plugin indent on    " required
@@ -103,7 +104,7 @@ set ruler
 set background=dark
 colorscheme gruvbox
 set laststatus=2
-set guifont=DejaVu\ Sans\ Mono\ Nerd\ Font\ Complete:h14
+set guifont=FiraCode\ Nerd\ Font:h14
 set fileencodings=utf-8,chinese
 set fileencoding=utf-8
 set noswapfile

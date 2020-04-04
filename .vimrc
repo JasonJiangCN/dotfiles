@@ -104,7 +104,7 @@ set ruler
 set background=dark
 colorscheme gruvbox
 set laststatus=2
-set guifont=FiraCode\ Nerd\ Font:h14
+set guifont=PragmataProMonoLiga\ Nerd\ Font:h16
 set fileencodings=utf-8,chinese
 set fileencoding=utf-8
 set noswapfile
